@@ -7,7 +7,7 @@ const app = express()
 app.use("/static", express.static('./static/'))
 app.use(express.static(__dirname + '/public'));
 app.get('/', (req,res) => {
-    res.sendFile('home.html', {root: __dirname })
+    res.sendFile('index.html', {root: __dirname })
     console.log("connected")
 });
 
