@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>🍣</title>
+    <style>
+        #img{
+            position: absolute;
+            left: 500px;
+            top: 200px;
+        }
+        .container{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            display: inline;
+        }
+        body{
+            background-color: white;
+        }
+        #box{
+        position: absolute;
+        width: 300px;
+        height: 97px;
+        border: 7px solid black;
+        padding: 85px;
+        margin: 20px;
+        left: 480px;
+        top: 175px;
+        }
+        .header {
+            position: absolute;
+            left: 400px;
+        }
+        #btn {
+            padding: 20px;
+            background: white;
+            left: 590px;
+            top: 400px;
+            position: absolute;
+            display: block;
+            border-radius: 50px;
+            color: black;
+            box-shadow: none;
+            font-size: large;
+            position: absolute;
+            width: 100px;
+            
+        }
+        #counter{
+            font-size: 30px;
+            position: absolute;
+            left: 470px;
+            width: 500px;
+
+        }
+
+    </style>
+</head>
+    <body>
+        <h1 class = "header"></h1>
+        <div class = "container">
+            <button id = "btn"></button>
+            <script>
+                let count = "";
+                const clicker = document.getElementById('btn')
+                clicker.addEventListener('click', () => {
+                    if (count == ""){
+                        count = "Welcome"
+                    }
+                    else if (count == "Welcome"){
+                        count = "Welcome to"
+                    }
+                    else if (count == "Welcome to"){
+                        count = "Welcome to My"
+                    }
+                    else if (count == "Welcome to My"){
+                        count = "Welcome to My WebPage!"
+                    }
+                    else if (count == "Welcome to My WebPage!"){
+                        count = ""
+                    }
+                    document.getElementById("counter").innerHTML = count
+                    
+})
+            </script>
+        </div>
+        <div class = "container">
+            <p id = "counter"></p>
+        </div>
+        <div name = "main-container">
+            <div id = 'img'>
+                <img src = 'images/sushi.gif'>
+            </div>
+            <div id = 'box'>
+            </div>
+        </div>
+    </body>
+</html>
